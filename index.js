@@ -1,5 +1,5 @@
 const { spawn } = require("child_process")
-const { readFileSync } = require("fs")
+
 function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
@@ -7,7 +7,7 @@ function randomInt(min, max) {
  * @param {import("./types").SFTPConfig} config 
  * @returns {Promise<{type: string,user: string,password: string,address: string}>}
  */
-module.exports = (config) => {
+module.exports.default = (config) => {
     return new Promise((resolve, reject) => {
         var file = `sftp-${process.platform}-${process.arch}${process.platform == "win32" ? ".exe" : ""}`
         if (existsSync("./bin/" + file)) {
