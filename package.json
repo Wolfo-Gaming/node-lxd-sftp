@@ -1,8 +1,8 @@
 {
   "name": "node-lxd-sftp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module for connecting with LXD's instance SFTP connection.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
